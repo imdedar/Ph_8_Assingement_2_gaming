@@ -195,9 +195,6 @@ section{
     filter: brightness(30%);
 }
 
-.play-section{
-    /* max-width: 1440px; */
-}
 .container{
     max-height: 100vh;
     /* margin-bottom: 100px; */
@@ -221,70 +218,12 @@ section{
     width: 100%;
 }
 
-
 .over-lap{
     position: absolute;
     right: 60%;
     top: 44%;
 }
-
-/* .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    opacity: 0; 
-    pointer-events: none; 
-    transition: opacity 0.3s ease-in-out; 
-  }
-
-  .play-button:hover {
-    opacity: 1; 
-  } */
-
-  /* .categories{ 
-    margin: 100px auto;
-    max-width: 1100px;
-    border: 2px solid red;
-}
-
-.category-game{
-    margin: 20px auto;
-    border: 2px solid green;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    gap: 10px;
-
-}
-
-.games{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 16px;
-    cursor: pointer;
-} */
-
-
-/* .games p{
-    padding-left: 10px;
-}
-
-
-.games:hover{
-  border: 1px solid #6528f7;
-  color: #FF52A2;
-  border-radius: 20px;
-  transition: .3s ease-out;
-  cursor: pointer;
-} */
-
+/* small gaming section */
 .categories-game{
   max-width: 1100px;
   margin: 100px auto;
@@ -304,8 +243,6 @@ section{
   padding-bottom: 10px;
   background-color: rgb(255, 255, 255);
   overflow: auto;
-  /* width: 200px;
-  height: 120px; */
 }
 
 .games-section:hover{
@@ -314,6 +251,7 @@ section{
   border-radius: 10px;
   transition: .3s ease-in;
 }
+/* small gaming section end */
 
 footer{
     height: 70vh;
@@ -364,7 +302,69 @@ footer{
 }
 
 
+/* card container style start */
+.card-container{
+  margin: 10px auto;
+  gap: 20px;
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+}
 
+.all-card{
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.5s ease-in-out;
+}
+
+.all-card:hover{
+  transform: translateY(20px);
+}
+
+.all-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4));
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.all-card:hover::before{
+  opacity: 1;
+}
+
+.all-card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.all-card .card-info{
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+.all-card:hover .card-info{
+  opacity: 1;
+  transform: translateY(0p);
+}
+/* card container style end */
 
 
 
